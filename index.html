@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript,Game, Bricks"> -->
+    <!-- <meta name="description" content="Personal portfolio and website"> -->
+    <!-- <meta name="author" content="Obradovic Petar"> -->
+    <link rel="icon" type="image/x-icon" href="assets/favico.png">
+    <title>ConnectFour</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .dot {
+            height: 25px;
+            width: 25px;
+
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .user {
+            background-color: #fae00a;
+        }
+
+        .cpu {
+            background-color: #000;
+        }
+
+        .text {
+            height: 25px;
+            padding-top: 4px
+        }
+
+        .block {
+            height: 25px;
+            width: 312px;
+            text-align: center;
+        }
+        .block:before {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%;
+        }
+
+        .inner {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        #gameTable{
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="block" id='score'>
+                User 0-0 CPU
+            </div>
+        <div class="block" id='loading'>
+                <!-- User 0-0 CPU -->
+            </div>
+        <canvas style="display: block" id="gameTable" width="312" height="312"></canvas>
+        <div class="block" style="margin-top: 10px">
+            <!-- <p> -->
+                <span class='inner text'>Player color:</span> <span class='inner dot user'></span> <span class='inner text'>CPU
+                    color:</span> <span class="inner dot cpu"></span>
+            <!-- </p> -->
+
+        </div>
+    </div>
+</body>
+<script src="util.js"></script>
+<script src="main.js"></script>
+
+</html>
