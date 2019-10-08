@@ -1,2 +1,2 @@
-# pera14.github.io
-My personally github web page
+# connectFour
+https://lambdaworks.io/challenge

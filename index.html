@@ -10,61 +10,14 @@
     <link rel="icon" type="image/x-icon" href="assets/favico.png">
     <title>ConnectFour</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .dot {
-            height: 25px;
-            width: 25px;
-
-            border-radius: 50%;
-            display: inline-block;
-        }
-
-        .user {
-            background-color: #fae00a;
-        }
-
-        .cpu {
-            background-color: #000;
-        }
-
-        .text {
-            height: 25px;
-            padding-top: 4px
-        }
-
-        .block {
-            height: 25px;
-            width: 312px;
-            text-align: center;
-        }
-        .block:before {
-            content: "";
-            display: inline-block;
-            vertical-align: middle;
-            height: 100%;
-        }
-
-        .inner {
-            display: inline-block;
-            vertical-align: middle;
-        }
-        #gameTable{
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <div class="block" id='score'>
+    <div style="text-align: center;">
+        <div style="display: inline-block;margin-top: 10%">
+            <div class="block title" id='score'>
                 User 0-0 CPU
-            </div>
-        <div class="block" id='loading'>
-                <!-- User 0-0 CPU -->
             </div>
         <canvas style="display: block" id="gameTable" width="312" height="312"></canvas>
         <div class="block" style="margin-top: 10px">
@@ -72,11 +25,16 @@
                 <span class='inner text'>Player color:</span> <span class='inner dot user'></span> <span class='inner text'>CPU
                     color:</span> <span class="inner dot cpu"></span>
             <!-- </p> -->
-
+            <p class="inner" style="font-size: 25px" id='pobedioText'>Pobedio je: </p><span class='inner dot user' id='winUser'></span><span class="inner dot cpu" id='winCpu'></span>
+            <button class="button button1" id='resetButton' onclick="init()">Ponovi partiju !</button>
         </div>
+        
+        </div>
+        
     </div>
+    
 </body>
 <script src="util.js"></script>
-<script src="main.js"></script>
+<script src="main-0.1.js"></script>
 
 </html>
